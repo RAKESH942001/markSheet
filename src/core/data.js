@@ -1,16 +1,16 @@
 
 const students = [
 	{
+		name: 'Rio',
 		std: 'III',
-		sec: 'A',
 	},
 	{
-		std: 'III',
-		sec: 'A',
-	},
-	{
+		name: 'Ria',
 		std: 'IV',
-		sec: 'B',
+	},
+	{
+		name: 'Rov',
+		std: 'V',
 	},
 ];
 
