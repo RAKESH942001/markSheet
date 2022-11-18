@@ -1,7 +1,36 @@
 .App {
 	text-align: center;
-
-	button {
-		font-weight: bold;
-	}
 }
+
+.tableStyle{
+
+	border-collapse: collapse;
+	margin: auto;
+	width: 85px;
+	text-align: left;
+	height: 30px;
+	background : lavender;
+}
+
+.tdStyle{
+	border: 2px solid black;
+	font-style:Times New Roman;
+	text-align: left;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+.tdNumberStyle{
+	border: 2px solid black;
+	text-align :right;
+	padding-right: 12px;
+	font-style:Times New Roman;
+};
+
+.thStyle{
+	border:2px solid black;
+	font-size:20px;
+	height:10px;
+
+};
+
