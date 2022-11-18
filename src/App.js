@@ -1,10 +1,10 @@
 import { React } from 'react';
 import './App.scss';
-import StudentData from './components/table';
+import GetMarkSheets from './components/table';
 
 const App = () =>
 	<div className="App" role="App">
-		<StudentData/>
+		<GetMarkSheets/>
 	</div>;
 
 export default App;
