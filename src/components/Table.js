@@ -1,17 +1,14 @@
 
-/* eslint-disable max-len */
-/* eslint-disable no-unused-vars */
-/* eslint-disable arrow-body-style */
-/* eslint-disable max-lines-per-function */
-/* eslint-disable no-console */
 import { React } from 'react';
-import markSheets from '../service/data';
-import processData from '../service/studentManager';
 import TableBody from './TableBody';
 import tableHeader from './TableHeader';
+import studentManager from '../service/studentManager';
+import { peek } from '@laufire/utils/debug';
+
 const heading = [
 	'RollNo',
 	'Name',
+	'Tamil',
 	'Maths',
 	'English',
 	'Science',
@@ -21,8 +18,9 @@ const heading = [
 	'Rank',
 
 ];
-const getMarkSheets = () =>
-	<div>
+const getMarkSheets = ({ state: { studentMarkSheets }}) => {
+	peek(studentMarkSheets);
+	return <div>
 		<h1>MarkSheets</h1>
 		<table className="tableStyle">
 			<thead>
@@ -31,13 +29,13 @@ const getMarkSheets = () =>
 				</tr>
 			</thead>
 			<tbody>
-				{
-					processData(markSheets).map(TableBody)
-				}
+				{studentManager.processMarkSheet(studentMarkSheets)
+					.map(TableBody)}
 
 			</tbody>
 
 		</table>
 	</div>;
+};
 
 export default getMarkSheets;

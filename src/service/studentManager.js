@@ -1,11 +1,11 @@
 
 const getTotal = (examPapers) =>
-	examPapers.tamil
-  + examPapers.english
-  + examPapers.maths
-  + examPapers.science
-  + examPapers.social
-  ;
+	Number(examPapers.tamil)
++ Number(examPapers.english)
++ Number(examPapers.maths)
++ Number(examPapers.science)
++ Number(examPapers.social)
+;
 const passMark = 35;
 const getResult = (examPapers) => (Math.min(
 	examPapers.tamil,
@@ -39,4 +39,21 @@ const processMarkSheet = (examPapers) => {
 	return getRank(finalData);
 };
 
-export default processMarkSheet;
+const getStudentMarks = () => ({
+
+	rollNo: 57,
+	name: 'z',
+	tamil: 51,
+	english: 71,
+	maths: 33,
+	science: 26,
+	social: 64,
+
+});
+
+const studentManager = {
+	processMarkSheet,
+	getStudentMarks,
+};
+
+export default studentManager;
