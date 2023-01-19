@@ -1,14 +1,16 @@
 import React from 'react';
+import studentManager from '../service/studentManager';
 
 const AddButton = (context) => {
 	const { state, setState } = context;
-	const { currentMarkSheet, studentMarkSheets } = state;
+	const { markSheets } = state;
 
 	return	<div className="addButton">
 		<button
 			onClick={ () => setState({
 				...state,
-				studentMarkSheets: [...studentMarkSheets, currentMarkSheet],
+				markSheets: [...markSheets,
+					studentManager.getStudentMarksWithId(context)],
 			}) }
 		>Add</button></div>;
 };

@@ -1,3 +1,5 @@
+/* eslint-disable no-magic-numbers */
+import { rndString } from '@laufire/utils/random';
 
 const getTotal = (examPapers) =>
 	Number(examPapers.tamil)
@@ -51,9 +53,13 @@ const getStudentMarks = () => ({
 
 });
 
+const getStudentMarksWithId = ({ state: { currentState }}) => ({
+	...currentState,	id: rndString(5),
+});
 const studentManager = {
 	processMarkSheet,
 	getStudentMarks,
+	getStudentMarksWithId,
 };
 
 export default studentManager;

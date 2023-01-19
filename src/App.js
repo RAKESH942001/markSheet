@@ -8,7 +8,7 @@ import AddButton from './components/AddButton';
 
 const getInitialState = (context) => ({
 	currentMarkSheet: studentManager.getStudentMarks(context),
-	studentMarkSheets: [...markSheets],
+	markSheets: markSheets,
 });
 
 const App = (context) => {

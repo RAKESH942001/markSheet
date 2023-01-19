@@ -18,8 +18,8 @@ const heading = [
 	'Rank',
 
 ];
-const getMarkSheets = ({ state: { studentMarkSheets }}) => {
-	peek(studentMarkSheets);
+const getMarkSheets = ({ state: { markSheets }}) => {
+	peek(markSheets);
 	return <div>
 		<h1>MarkSheets</h1>
 		<table className="tableStyle">
@@ -29,7 +29,7 @@ const getMarkSheets = ({ state: { studentMarkSheets }}) => {
 				</tr>
 			</thead>
 			<tbody>
-				{studentManager.processMarkSheet(studentMarkSheets)
+				{studentManager.processMarkSheet(markSheets)
 					.map(TableBody)}
 
 			</tbody>
